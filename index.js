@@ -12,7 +12,7 @@ function tag(x, y) {
 function saveSVG(elements) {
 	const { open, close } = tag(300, 200);
 	elements = [open, ...elements, close];
-	data = elements.join();
+	data = elements.join(' ');
 	fs.writeFile('./examples/logo.svg', data, (err) => {
 		if (err) throw err;
 		console.log('Save successful!');
